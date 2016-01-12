@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 	    },
 	    minjson: {
 			dist: {
-			    files: { 
+			    files: {
                 	'projects/projects.json': 'src/projects/projects.json'
             	}
 			 }
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
         uglify : {
             dist : {
                 options : {
-                    compress : true,
+                    compress: {},
                     mangle : true,
                     preserveComments : false
                 },
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
         	fonts : {
         		expand: true,
         		flatten: true,
-        		src: ['src/fonts/**', 'bower_components/fontawesome/fonts/**'], 
+        		src: ['src/fonts/**', 'bower_components/fontawesome/fonts/**'],
         		dest: 'fonts',
         		filter: 'isFile'
         	}
