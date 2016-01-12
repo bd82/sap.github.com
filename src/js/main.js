@@ -4,6 +4,23 @@ var githubToken = '3c0b397bd4e5bdb5c58e5c14126136a1e79b67f8',
   deferreds = [],
   sortParam, filterParam, endpointUri;
 
+// integration of Google Analytics
+(function(i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r;
+  i[r] = i[r] || function() {
+    (i[r].q = i[r].q || []).push(arguments);
+  }, i[r].l = 1 * new Date();
+  a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0];
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m);
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-72324411-1', 'auto');
+ga('send', 'pageview');
+
+
 function getURLParameter(name) {
   return (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1];
 }
@@ -284,9 +301,9 @@ $(document).ready(function() {
   $(function() {
     var words = ['Give', 'Take', 'Solve'],
       index = 0,
-      $el = $('#rotate-word')
+      $el = $('#rotate-word');
     setInterval(function() {
-      index++ < words.length - 1 || (index = 0);
+      (index + 1 < words.length - 1) ? index++ : index = 0;
       $el.fadeOut(function() {
         $el.text(words[index]).fadeIn();
       });
