@@ -294,7 +294,7 @@ $(document).ready(function() {
     m.parentNode.insertBefore(a, m);
   })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-72324411-1', 'auto');
+  ga('create', 'UA-75506944-1', 'auto');
   ga('send', 'pageview');
 
   // word rotation in header
