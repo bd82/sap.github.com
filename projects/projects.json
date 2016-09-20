@@ -471,9 +471,6 @@
 	{
 		"categories": [
 			{
-				"name": "general"
-			},
-			{
 				"name": "cloud"
 			}
 		],
@@ -484,9 +481,6 @@
 	{
 		"categories": [
 			{
-				"name": "general"
-			},
-			{
 				"name": "cloud"
 			}
 		],
@@ -496,9 +490,6 @@
 	},
 	{
 		"categories": [
-			{
-				"name": "general"
-			},
 			{
 				"name": "cloud"
 			}
