@@ -403,7 +403,7 @@
 			}
 		],
 		"projectTitle": "Gamification Demo: HelpDesk",
-		"projectDescription": "This code example includes a sample application named 'HelpDesk' in order to demonstrate how to use the APIs of the HCP Gamification Service.",
+		"projectDescription": "This code example includes a sample application named 'HelpDesk' in order to demonstrate how to use the APIs of the SAP Cloud Platform Gamification Service.",
 		"linkToGithub": "https://github.com/SAP/gamification-demo-app",
 		"linkToProject": "https://help.hana.ondemand.com/help/frameset.htm?eb90a443dde24b79b3428ac1fe27f26f.html"
 	},
@@ -419,8 +419,8 @@
 				"name": "featured"
 			}
 		],
-		"projectTitle": "Starter Kit: HCP IoT Services",
-		"projectDescription": "SAP HCP IoT Services are designed to facilitate and support the implementation of IoT applications. We provide a Starter Kit that helps you getting your applications using these services up and running fast and convenient.",
+		"projectTitle": "Starter Kit: SAP Cloud Platform IoT Services",
+		"projectDescription": "SAP Cloud Platform IoT Services are designed to facilitate and support the implementation of IoT applications. We provide a Starter Kit that helps you getting your applications using these services up and running fast and convenient.",
 		"linkToGithub": "https://github.com/SAP/iot-starterkit",
 		"linkToProject": "http://scn.sap.com/docs/DOC-63811"
 	},
@@ -474,7 +474,7 @@
 				"name": "cloud"
 			}
 		],
-		"projectTitle": "HCP Portal Service for PCM",
+		"projectTitle": "SAP Cloud Platform Portal Service for PCM",
 		"projectDescription": "HANA Cloud Platform portal service accelerator for SAP Hybris Cloud for Customer Partner Channel Management",
 		"linkToGithub": "https://github.com/SAP/hcp-portal-service-for-pcm"
 	},
@@ -484,7 +484,7 @@
 				"name": "cloud"
 			}
 		],
-		"projectTitle": "HCP Portal Service for Support Site",
+		"projectTitle": "SAP Cloud Platform Portal Service for Support Site",
 		"projectDescription": "HANA Cloud Platform portal service accelerator for SAP Hybris Cloud for Customer Support Site",
 		"linkToGithub": "https://github.com/SAP/hcp-portal-service-for-support-site"
 	},
@@ -494,7 +494,7 @@
 				"name": "cloud"
 			}
 		],
-		"projectTitle": "HCP Portal Service Samples",
+		"projectTitle": "SAP Cloud Platform Portal Service Samples",
 		"projectDescription": "Code samples of site and page templates, applications, widgets, shell plugins and more, intended to be used as references for development of custom content for SAP HANA Cloud Platform portal service sites.",
 		"linkToGithub": "https://github.com/SAP/hcp-portal-service-samples"
 	}
