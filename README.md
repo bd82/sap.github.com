@@ -1,5 +1,8 @@
+# Temporarily removed
+This page has been temporarily removed, as it is out of date and requires rework.  It will be republished when that work is finished.  We do not have an expected completion date yet, but will update this page as soon as possible.
+
 # What is it?
-Source files for the SAP OSS web page sap.github.com / sap.github.io. Features include filtering, ordering,  instant search, URL access/update, file size optimization and GitHub API usage for listed projects. 
+Source files for the SAP OSS web page sap.github.com / sap.github.io. Features include filtering, ordering,  instant search, URL access/update, file size optimization and GitHub API usage for listed projects.
 Project data stored in JSON for easy modification.
 
 # What is used?
