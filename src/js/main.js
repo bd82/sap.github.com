@@ -326,7 +326,7 @@ function getRepositoryData(callback, url) {
 $(document).ready(function () {
 
     // initialize tooltip
-    $( document ).tooltip();
+    //$( document ).tooltip();
 
     // integration of Google Analytics
     (function (i, s, o, g, r, a, m) {
@@ -389,7 +389,7 @@ $(document).ready(function () {
         return false;
     });
 
-    $('#back-to-top').tooltip('show');
+    //$('#back-to-top').tooltip('show');
 
     $('#sortAsc').click(function () {
         sortParam = 'asc';
