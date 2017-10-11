@@ -325,6 +325,8 @@ function getRepositoryData(callback, url) {
 
 $(document).ready(function () {
 
+    // initialize tooltip
+    $( document ).tooltip();
 
     // integration of Google Analytics
     (function (i, s, o, g, r, a, m) {
