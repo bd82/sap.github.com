@@ -88,7 +88,8 @@ module.exports = function(grunt) {
         uglify : {
             dist : {
                 options : {
-                    compress: {},
+                	compress: false,
+                	beautify: true,
                     mangle : false,
                     preserveComments : true
                 },
