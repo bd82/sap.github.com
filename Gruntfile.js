@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 			    	ignore: ['#back-to-top', '.back-to-top', '.tooltip', '.fade', '.left', '.in', '.out', '.nav .active', '.nav .active a', '.btn-toggle:hover, .btn-toggle:focus, .btn-toggle.active', '.btn-toggle.active:hover', '.collapsing', '.navbar-collapse.in', '.collapse.in']
 			    },
 		    	files: {
-		      		'css/main.min.css': 'index.html.test'
+		      		'css/main.min.css': 'index.test.html'
 		    	}
 		  	}
 		},
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 	        		collapseWhitespace: false
 	      		},
 	      		files: {
-	        		'index.html.test': 'src/main/web/index.html'
+	        		'index.test.html': 'src/main/web/index.html'
 	      		}
 	      	}
 	    },
