@@ -47,8 +47,8 @@ module.exports = function(grunt) {
 	    htmlmin: {
 	    	dist: {
 	     		options: {
-	        		removeComments: true,
-	        		collapseWhitespace: true
+	        		removeComments: false,
+	        		collapseWhitespace: false
 	      		},
 	      		files: {
 	        		'index.html.test': 'src/main/web/index.html'
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
         sass: {
             dist : {
                 options: {
-                    style: "compressed"
+                    style: "uncompressed"
                 },
                 files: {
                     "css/main.min.css": "src/main/web/sass/main.scss"
@@ -89,8 +89,8 @@ module.exports = function(grunt) {
             dist : {
                 options : {
                     compress: {},
-                    mangle : true,
-                    preserveComments : false
+                    mangle : false,
+                    preserveComments : true
                 },
                 files: {
                     "js/main.min.js" : ["bower_components/jquery/dist/jquery.js", "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js", "src/main/web/js/main.js"]
