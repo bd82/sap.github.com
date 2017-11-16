@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 			    	ignore: ['#back-to-top', '.back-to-top', '.tooltip', '.fade', '.left', '.in', '.out', '.nav .active', '.nav .active a', '.btn-toggle:hover, .btn-toggle:focus, .btn-toggle.active', '.btn-toggle.active:hover', '.collapsing', '.navbar-collapse.in', '.collapse.in']
 			    },
 		    	files: {
-		      		'css/main.min.css': 'index.html'
+		      		'css/main.min.css': 'index.html.test'
 		    	}
 		  	}
 		},
@@ -51,14 +51,14 @@ module.exports = function(grunt) {
 	        		collapseWhitespace: true
 	      		},
 	      		files: {
-	        		'index.html': 'src/index.html'
+	        		'index.html.test': 'src/main/web/index.html'
 	      		}
 	      	}
 	    },
 	    minjson: {
 			dist: {
 			    files: {
-                	'projects/projects.json': 'src/projects/projects.json'
+                	'projects/projects.json': 'src/main/web/projects/projects.json'
             	}
 			 }
 		},
@@ -68,7 +68,7 @@ module.exports = function(grunt) {
                     style: "compressed"
                 },
                 files: {
-                    "css/main.min.css": "src/sass/main.scss"
+                    "css/main.min.css": "src/main/web/sass/main.scss"
                 }
             }
         },
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
 		      	},
 		    	files: [{
 		        	expand: true,
-		        	cwd: 'src/img',
+		        	cwd: 'src/main/web/img',
 		        	src: ['**/*.{png,jpg,gif,svg}'],
 		        	dest: 'img'
 		      	}]
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
                     preserveComments : false
                 },
                 files: {
-                    "js/main.min.js" : ["bower_components/jquery/dist/jquery.js", "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js", "src/js/main.js"]
+                    "js/main.min.js" : ["bower_components/jquery/dist/jquery.js", "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js", "src/main/web/js/main.js"]
                 }
             }
         },
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
         	fonts : {
         		expand: true,
         		flatten: true,
-        		src: ['src/fonts/**', 'bower_components/fontawesome/fonts/**'],
+        		src: ['src/main/web/fonts/**', 'bower_components/fontawesome/fonts/**'],
         		dest: 'fonts',
         		filter: 'isFile'
         	}
