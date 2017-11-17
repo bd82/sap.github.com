@@ -18,8 +18,6 @@ import com.google.common.collect.Maps;
 
 public class DataRetrieval {
 
-	private static final String github_token = "ab5149a473eb7e8d312ca9890ac047bf00140b41";
-	
 	private static final String urlBase = "https://api.github.com/orgs/sap";
 	private static final String url = "https://api.github.com/orgs/sap/repos";
 
