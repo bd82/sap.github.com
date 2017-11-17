@@ -33,10 +33,21 @@ function initDeafult() {
     }
 }
 
+function getHostAndPath(href) {
+    var l = document.createElement("a");
+    l.href = href;
+    return l;
+};
+
+function getPath(href){
+	return getHostAndPath(href).pathname;
+}
+
 function setURLParameter() {
     //set the URL accordingly
     if (getURLParameter('sort') !== sortParam || getURLParameter('filter') !== filterParam) {
-        history.pushState(null, null, "index.test.html?sort=" + sortParam + "&filter=" + filterParam);
+        //history.pushState(null, null, "index.html?sort=" + sortParam + "&filter=" + filterParam);
+    	history.pushState(null, null, getPath(window.location.href) + "?sort=" + sortParam + "&filter=" + filterParam);
     }
 }
 
@@ -54,7 +65,8 @@ function setSwitchState() {
 }
 
 //set the URL accordingly
-history.replaceState(null, null, "index.html?sort=" + sortParam + "&filter=" + filterParam);
+//history.replaceState(null, null, "index.html?sort=" + sortParam + "&filter=" + filterParam);
+history.replaceState(null, null, getPath(window.location.href) + "?sort=" + sortParam + "&filter=" + filterParam);
 
 window.addEventListener('popstate', function () {
     initDeafult();
