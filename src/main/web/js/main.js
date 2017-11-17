@@ -36,7 +36,7 @@ function initDeafult() {
 function setURLParameter() {
     //set the URL accordingly
     if (getURLParameter('sort') !== sortParam || getURLParameter('filter') !== filterParam) {
-        history.pushState(null, null, "index.html?sort=" + sortParam + "&filter=" + filterParam);
+        history.pushState(null, null, "index.test.html?sort=" + sortParam + "&filter=" + filterParam);
     }
 }
 
