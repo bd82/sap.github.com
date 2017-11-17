@@ -23,7 +23,7 @@ function initDeafult() {
     // if params not set, assign default values
     if (!sortParam) {
         // sorting is ascending by default
-        sortParam = "asc";
+        sortParam = "newest";
     }
 
     if (!filterParam) {
