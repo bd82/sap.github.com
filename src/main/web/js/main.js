@@ -1,5 +1,4 @@
-var githubToken = '9a5289fb2465cabb54387399811f6e8e64c4aa31',
-    jsonObjects = [],
+var jsonObjects = [],
     filteredObjects = [],
     deferreds = [],
     sortParam, filterParam, endpointUri;
@@ -28,8 +27,8 @@ function initDeafult() {
     }
 
     if (!filterParam) {
-        // filter for featured projects by default
-        filterParam = "featured";
+        // filter for all projects by default
+        filterParam = "all";
     }
 }
 
@@ -46,7 +45,6 @@ function getPath(href){
 function setURLParameter() {
     //set the URL accordingly
     if (getURLParameter('sort') !== sortParam || getURLParameter('filter') !== filterParam) {
-        //history.pushState(null, null, "index.html?sort=" + sortParam + "&filter=" + filterParam);
     	history.pushState(null, null, getPath(window.location.href) + "?sort=" + sortParam + "&filter=" + filterParam);
     }
 }
@@ -65,7 +63,6 @@ function setSwitchState() {
 }
 
 //set the URL accordingly
-//history.replaceState(null, null, "index.html?sort=" + sortParam + "&filter=" + filterParam);
 history.replaceState(null, null, getPath(window.location.href) + "?sort=" + sortParam + "&filter=" + filterParam);
 
 window.addEventListener('popstate', function () {
@@ -452,6 +449,37 @@ $(document).ready(function () {
             jsonObject.open_issues_count = repo.open_issues_count
             jsonObject.stargazers_count = repo.stargazers_count
             jsonObject.subscribers_count = repo.subscribers_count
+            
+            // Add categories based on project name
+            jsonObject.categories = [];
+            if ( repo.name.startsWith("cloud-") || repo.name.startsWith("cf-") ){
+            	var category = { 
+            		name : "cloud"
+            	}
+            	jsonObject.categories.push( category );
+            } else if ( repo.name.startsWith("hana-") || repo.name.startsWith("hxe-") ){
+            	var category = { 
+                		name : "data"
+                	}
+                jsonObject.categories.push( category );
+            } else if ( repo.name.startsWith("openui5") || repo.name.startsWith("build") ){
+            	var category = { 
+                		name : "interface"
+                	}
+                jsonObject.categories.push( category );
+            } else if ( repo.name.startsWith("Mobile") || repo.name.startsWith("sap_mobile") ){
+            	var category = { 
+                		name : "mobile"
+                	}
+                jsonObject.categories.push( category );
+            } else {
+            	var category = { 
+                		name : "general"
+                	}
+                jsonObject.categories.push( category );
+            }
+            
+            
             jsonObjects.push(jsonObject);
         });
         setSwitchState();
