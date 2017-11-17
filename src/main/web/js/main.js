@@ -308,9 +308,9 @@ function getRepositoryData(callback, url) {
         "crossDomain": true,
         "url": url,
         "method": "GET",
-        "headers": {
-            "Authorization": "token " + githubToken
-        }
+//        "headers": {
+//            "Authorization": "token " + githubToken
+//        }
     }
 
     $.ajax(settings).done(function (responseBody, textStatus, xhr) {
