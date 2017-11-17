@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 			    	ignore: ['#back-to-top', '.back-to-top', '.tooltip', '.fade', '.left', '.in', '.out', '.nav .active', '.nav .active a', '.btn-toggle:hover, .btn-toggle:focus, .btn-toggle.active', '.btn-toggle.active:hover', '.collapsing', '.navbar-collapse.in', '.collapse.in']
 			    },
 		    	files: {
-		      		'css/main.min.css': 'index.test.html'
+		      		'css/main.min.css': 'index.html'
 		    	}
 		  	}
 		},
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 	        		collapseWhitespace: false
 	      		},
 	      		files: {
-	        		'index.test.html': 'src/main/web/index.html'
+	        		'index.html': 'src/main/web/index.html'
 	      		}
 	      	}
 	    },
@@ -87,11 +87,11 @@ module.exports = function(grunt) {
 		},
         uglify : {
             dist : {
-                options : {
-                	compress: false,
-                	beautify: true,
-                    mangle : false,
-                    preserveComments : true
+            	options : {
+                    compress: {},
+                    mangle : true,
+                    preserveComments : false,
+                    beautify: false,
                 },
                 files: {
                     "js/main.min.js" : ["bower_components/jquery/dist/jquery.js", "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js", "src/main/web/js/main.js"]
