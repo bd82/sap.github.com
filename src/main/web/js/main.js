@@ -135,7 +135,7 @@ function filterJSON(cat) {
 
 // search JSON for specific input
 function searchJSON(input) {
-    var searchStr = input.toLowerCase();
+    var searchStr = input === undefined ? '' : input.toLowerCase();
 
     filteredObjects = [];
 
@@ -448,7 +448,7 @@ $(document).ready(function () {
         repos.forEach(function (repo) {
             var jsonObject = {};
             jsonObject.projectTitle = repo.name
-            jsonObject.projectDescription = repo.description
+            jsonObject.projectDescription = repo.description != null ? repo.description : ' ';
             jsonObject.linkToGithub = repo.html_url
             jsonObject.updatedAt = repo.updated_at
             jsonObject.language = repo.language
