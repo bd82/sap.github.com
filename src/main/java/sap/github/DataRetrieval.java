@@ -71,11 +71,6 @@ public class DataRetrieval {
 			e.printStackTrace();
 		}
 	}
-
-	public static void testingGraphQL() {
-		String schema = "type Query{hello: String}";
-		
-	}
 	
 	public static int getRepoCount() throws MalformedURLException, IOException {
 		URLConnection conn = new URL( urlBase ).openConnection();
