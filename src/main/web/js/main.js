@@ -3,6 +3,10 @@ var jsonObjects = [],
     deferreds = [],
     sortParam, filterParam, endpointUri;
 
+// Set items never to display (like the web page repository)
+var neverDisplay = ['sap.github.com'];
+
+
 function getURLParameter(name) {
     return (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1];
 }
@@ -95,13 +99,11 @@ function setCategoryActive(cat) {
 
 // filter JSON by category
 function filterJSON(cat) {
-    filterParam = cat.toLowerCase();
-    // reset search input field
     $('#searchTxt').val('');
 
-    if (cat.toLowerCase() === "all") {
-        filteredObjects = jsonObjects;
-    } else {
+//    if (cat.toLowerCase() === "all") {
+//        filteredObjects = jsonObjects;
+//    } else {
         filteredObjects = [];
 
         $.each(jsonObjects, function (i, item) {
@@ -109,8 +111,14 @@ function filterJSON(cat) {
             var isPartOfCategory = false;
 
             $.each(item.categories, function (c, category) {
-                if (category.name.toLowerCase() === cat.toLowerCase()) {
+                if (cat.toLowerCase() === "all" || category.name.toLowerCase() === cat.toLowerCase()) {
                     isPartOfCategory = true;
+                }
+            });
+
+            $.each(neverDisplay, function(n, never) {
+                if (item.projectTitle.toLowerCase() === never.toLowerCase()) {
+                    isPartOfCategory = false;
                 }
             });
 
@@ -118,7 +126,7 @@ function filterJSON(cat) {
                 filteredObjects.push(item);
             }
         });
-    }
+//    }
 
     //set the URL accordingly
     setURLParameter();
